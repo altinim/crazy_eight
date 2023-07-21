@@ -1,0 +1,79 @@
+<!-- A single playing card  with a bot( does not  include the log after playing the game also is not multiplayer game it is vs a computer)
+
+  You simply play the game by opening this Crazy8.html file in any browser.
+  You click Start to start the game.
+  You click Start again if you want to start a new game.
+  You click Check the rules to check the game rules.
+-->
+
+<!DOCTYPE html>
+<html ">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Crazy Eights</title>
+    <!-- Model classes -->
+    <script type="text/javascript" src="Card.js"></script>
+    <script type="text/javascript" src="Deck.js"></script>
+    <script type="text/javascript" src="Pile.js"></script>
+    <script type="text/javascript" src="Player.js"></script>
+    <!-- View and Presenter classes -->
+    <script type="text/javascript" src="View.js"></script>
+    <script type="text/javascript" src="Presenter.js"></script>
+    <!-- Main program -->
+    <script type="text/javascript" src="Main.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body onload="init();">
+    <div id="before_game" style="display: flex">
+     
+      <button class="button-link flex" type="button margin" id="start_button">
+        Click to Start
+      </button>
+    </div>
+
+    <div id="game_start" style="display: none">
+      <div
+        class="div-width"
+        id="computerHand"
+        style="position: relative; height: 100px"
+      ></div>
+      <div id="table" style="position: relative; height: 100px"></div>
+      <div
+        class="div-width"
+        id="playerHand"
+        style="position: relative; height: 100px; cursor: pointer"
+      ></div>
+      <div id="suitMenu" style="display: none">
+        <p>What suit would you like the 8 to be?</p>
+        <div id="suits">
+          <span id="c">&clubs;</span>
+          <span id="d" style="color: red">&diams;</span>
+          <span id="h" style="color: red">&hearts;</span>
+          <span id="s">&spades;</span>
+        </div>
+      </div>
+      <div id="forfeit">
+        <button class="button-link">Start again</button>
+      </div>
+      <div id="ruleReference" style="display: none">
+        <ul>
+          <li>You are playing against a computer,</li>
+          <li>You always start the game</li>
+          <li>Either you or the computer might win.</li>
+            <li>All 52 cards from the deck, including the jokers, are used.</li>
+            <li>Multiple decks of cards can be used simultaneously.            </li>
+            <li>All players are dealt an equal number of cards, for example, seven</li>
+            <li> Players take turns playing a card onto a central discard pile. </li>
+            <li>The card played must match either the value or suit of the top cardon the discard pile.</li>
+            <li>The first player to get rid of all their cards is the winner.If a player cannot play a card, they must draw a card from the drawpile.</li>
+            <li>Players can not end the game with a special card. If a player’s lastcard is a special card the player has to draw a card from the drawpile.</li>
+        </ul>
+        </ul>
+        <button class="button-link" type="button" id="ruleclose">Close</button>
+      </div>
+      <div id="ruleopen" style="display: inline-block">
+        <button class="button-link" type="button">Check the rules</button>
+      </div>
+    </div>
+  </body>
+</html>
